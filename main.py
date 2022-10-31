@@ -1,9 +1,12 @@
 from art import logo
 print(logo)
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+#this alphabet list is duplicated to cater for the indexes that will go beyond 25
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+            'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
+  #If we are decoding, then we should be subtracting the shift_amount from the index of the letters in the encrypted text, so we make shift_amount negative
   if cipher_direction == "decode":
     shift_amount *= -1
   
@@ -48,4 +51,4 @@ while should_continue:
     question = input("Type yes if you want to continue and type no if you don't want.")
     if question == "no":
         should_continue = False
-        print("Bye")
+        print("Good Bye")
